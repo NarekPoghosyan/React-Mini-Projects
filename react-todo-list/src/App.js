@@ -10,6 +10,10 @@ function App() {
 
 
   const addTodo = (todoName) => {
+    if (!todoName) {
+      alert('Wrong input data')
+      return;
+    }
     const allTodos = [...todos, todoName]
     setTodos(allTodos)
     localStorage.setItem('todos', JSON.stringify(allTodos))

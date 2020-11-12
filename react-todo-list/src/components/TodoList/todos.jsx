@@ -10,7 +10,7 @@ function Todos({ edit, todosArray, removeTodo }) {
             {todosArray.map((todo, index) => {
                 return (
                     <ul>
-                        <div className="todo_number">{index + 1}.</div>
+                        <div className="todo_number">{index < 9 ? '0' + (index + 1): index + 1}.</div>
                         <li key={index} onClick={() => {
                             edit(index)
                             history.push('/edit')
