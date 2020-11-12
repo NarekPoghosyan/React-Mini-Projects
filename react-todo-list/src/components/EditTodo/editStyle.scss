@@ -1,0 +1,40 @@
+@mixin widHei($wid,$hei) {
+    width: $wid;
+    height: $hei;
+}
+
+%border-outline-radius {
+    border-radius: 5px;
+    border: none;
+    outline: none;
+}
+
+.edit_todo {
+    @include widHei(600px, 40px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    input {
+        @include widHei(200px, 30px);
+        border: 1px solid gray;
+        outline: none;
+        border-radius: 5px;
+        padding-left: 5px;
+
+        &:focus {
+            -webkit-box-shadow: 0 0 10px rgb(0, 102, 255);
+            box-shadow: 0 0 10px rgb(0, 102, 255);
+        }
+
+    }
+
+    button {
+        @include widHei(80px, 30px);
+        margin-left: 10px;
+        background-color: rgb(0, 102, 255);
+        color: white;
+        cursor: pointer;
+        @extend %border-outline-radius;
+    }
+}

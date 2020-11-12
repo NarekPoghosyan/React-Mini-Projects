@@ -1,0 +1,37 @@
+.add_todo {
+    width: 600px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    input {
+
+        height: 30px;
+        width: 200px;
+        outline: none;
+        border: 1px solid gray;
+        border-radius: 5px;
+        padding-left: 5px;
+
+        &:focus {
+            -webkit-box-shadow: 0 0 10px rgb(0, 102, 255);
+            box-shadow: 0 0 10px rgb(0, 102, 255);
+        }
+
+    }
+
+    button {
+        margin-left: 10px;
+        width: 80px;
+        height: 30px;
+        background-color: rgb(0, 102, 255);
+        color: white;
+        cursor: pointer;
+        border: none;
+        border-radius: 5px;
+        outline: none;
+    }
+
+
+}
